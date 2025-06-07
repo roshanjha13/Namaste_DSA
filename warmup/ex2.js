@@ -48,6 +48,7 @@
 
 // eligbleToVote(20)
 
+
 function isEvenOrOdd(num) {
     if (num === 0 || num < 0){
         console.log("invalid input");
