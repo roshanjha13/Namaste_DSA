@@ -9,6 +9,10 @@ function  reverseInteger(n) {
         n=Math.floor(n/10)
     }
 
+    let limit = Math.pow(2,31)
+
+    if (rev < -limit || rev > limit) return 0;
+
     return (nCopy < 0) ? -reverse : reverse;
 }
 
