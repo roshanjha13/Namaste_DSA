@@ -14,9 +14,10 @@ function bubbleSort(arr) {
                 isSwapped = true;
             }
 
-            if (!isSwapped) break;
         }
         
+        if (!isSwapped) break;
+
     }
 
     return arr
