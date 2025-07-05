@@ -21,21 +21,21 @@ function addAtHead(val) {
 }
 
 
-// function addToTail(val) {
-//     let newNode = new Node(val);
-//     if (!this.head) {
-//         this.head = newNode;
-//         this.tail = newNode
-//     } else {
-//         let curr = this.head;
-//         while (curr.next !== null) {
-//             curr = curr.next;
-//         }
-//         curr.next = newNode;
-//     }
-//     this.size++;
+function addToTail(val) {
+    let newNode = new Node(val);
+    if (!this.head) {
+        this.head = newNode;
+        this.tail = newNode
+    } else {
+        let curr = this.head;
+        while (curr.next !== null) {
+            curr = curr.next;
+        }
+        curr.next = newNode;
+    }
+    this.size++;
     
-// }
+}
 
 // function addAtParticularIndex(val,index) {
 //     let newNode = new Node(val);
