@@ -37,29 +37,29 @@ function addToTail(val) {
     
 }
 
-// function addAtParticularIndex(val,index) {
-//     let newNode = new Node(val);
+function addAtParticularIndex(val,index) {
+    let newNode = new Node(val);
     
-//     if (index == 0) {
-//         this.addAtHead(val);
-//         return;
-//     }
+    if (index == 0) {
+        this.addAtHead(val);
+        return;
+    }
 
-//     else if (index == this.size) {
-//         this.addToTail(val);
-//         return;
-//     }
+    else if (index == this.size) {
+        this.addToTail(val);
+        return;
+    }
 
-//     else{
-//         let curr = this.head;
+    else{
+        let curr = this.head;
     
-//         for (let i = 0; i < index - 1; i++) {
-//             curr = curr.next;   
-//         }
+        for (let i = 0; i < index - 1; i++) {
+            curr = curr.next;   
+        }
 
-//         newNode.next = curr.next;
-//         curr.next = newNode;
-//     }
+        newNode.next = curr.next;
+        curr.next = newNode;
+    }
 
-//     this.size++;
-// }
+    this.size++;
+}
