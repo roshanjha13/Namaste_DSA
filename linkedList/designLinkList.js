@@ -38,7 +38,7 @@ function addToTail(val) {
 
 function addAtParticularIndex(val,index) {
     let newNode = new Node(val);
-    
+    if (index < 0 || index > this.size ) return
     if (index == 0) {
         this.addAtHead(val);
         return;
@@ -64,14 +64,30 @@ function addAtParticularIndex(val,index) {
 }
 
 function getElementInLL(index) {
-    let curr = this.head;
-
     if (index < 0 || index >= this.size) {
         return -1 
     }
+    
+    let curr = this.head;
+
     for (let i = 0; i < index; i++) {
         curr = curr.next;
     }
 
     return curr.val
+}
+
+function deleteAtIndex(index) {
+    if (index < 0 || index >= this.size) return
+
+    if (index === 0) { // delete first element
+        this.head = this.head.next
+    } else {
+        let curr = this.head;
+        for (let i = 0; i < index -1; i++) {
+            curr = curr.next
+        }
+        curr.next = curr.next.next;
+    }
+    this.size--
 }
