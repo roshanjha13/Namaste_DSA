@@ -20,7 +20,6 @@ function addAtHead(val) {
     this.size++
 }
 
-
 function addToTail(val) {
     let newNode = new Node(val);
     if (!this.head) {
@@ -62,4 +61,17 @@ function addAtParticularIndex(val,index) {
     }
 
     this.size++;
+}
+
+function getElementInLL(index) {
+    let curr = this.head;
+
+    if (index < 0 || index >= this.size) {
+        return -1 
+    }
+    for (let i = 0; i < index; i++) {
+        curr = curr.next;
+    }
+
+    return curr.val
 }
