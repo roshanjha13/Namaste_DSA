@@ -1,4 +1,4 @@
-var oddEvenLL = function(l1,l2) {
+var addTwoNumberInLL = function(l1,l2) {
     let ans = new ListNode()
     let ansCopy = ans;
     let carry = 0
